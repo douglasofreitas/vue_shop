@@ -1,16 +1,15 @@
 <template>
   <product-form 
-    
+     @save-product="addProduct"
     :model="model" 
     :manufacturers="manufacturers">
   </product-form>
 </template>
 
 <script>
-  import ProductFrom from '@/components/product/ProductForm';
-
+  import ProductFrom from '@/components/product/ProductForm.vue'
   export default {
-    data() {
+    data () {
       return {
         model: {},
         manufacturers: [
@@ -23,24 +22,15 @@
             name: 'Apple',
           },
         ],
-      };
+      }
     },
-//    created () {
-//      this.$store.dispatch('allManufacturers')
-//    },
-//    computed: {
-//      manufacturers () {
-//        return this.$store.getters.allManufacturers
-//      }
-//    },
-//    methods: {
-//      addProduct (model) {
-//        console.log('model', model)
-//        this.$store.dispatch('addProduct', model)
-//      }
-//    },
+    methods: {
+      addProduct (model) {
+        console.log('model', model)
+      }
+    },
     components: {
-      'product-form': ProductFrom,
-    },
-  };
+      'product-form': ProductFrom
+    }
+  }
 </script>
