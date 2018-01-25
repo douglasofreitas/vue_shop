@@ -1,4 +1,4 @@
-const productGetters = {
+export const productGetters = {
   // All products
   allProducts: state => state.products,
 
@@ -11,12 +11,7 @@ const productGetters = {
   },
 };
 
-const manufacturerGetters = {
+export const manufacturerGetters = {
   // All manufacturers
   allManufacturers: state => state.manufacturers,
-};
-
-export default {
-  productGetters,
-  manufacturerGetters,
 };

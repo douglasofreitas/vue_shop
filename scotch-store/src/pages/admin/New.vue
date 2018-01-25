@@ -9,6 +9,7 @@
 <script>
   import ProductFrom from '@/components/product/ProductForm.vue'
   export default {
+    /*
     data () {
       return {
         model: {},
@@ -24,9 +25,19 @@
         ],
       }
     },
+    */
+    computed: {
+      manufacturers () {
+        return this.$store.getters.allManufacturers
+      },
+      model () {
+        return {};
+      }
+    },
     methods: {
       addProduct (model) {
-        console.log('model', model)
+        console.log('model', model);
+        this.$store.dispatch('addProduct', model)
       }
     },
     components: {

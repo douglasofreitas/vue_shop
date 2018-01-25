@@ -15,7 +15,7 @@ import {
   ALL_MANUFACTURERS_SUCCESS,
 } from './mutation-types';
 
-const API_BASE = '<API-URL/api/vi>';
+const API_BASE = 'http://localhost:3000/api/v1';
 
 export const productActions = {
   allProducts({ commit }) {
