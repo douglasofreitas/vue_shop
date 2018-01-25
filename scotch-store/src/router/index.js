@@ -3,8 +3,9 @@ import Router from 'vue-router';
 
 import Home from '@/pages/Home';
 import Cart from '@/pages/Cart';
+import Details from '@/pages/Details';
 
-//Admin Components
+// Admin Components
 import Index from '@/pages/admin/Index';
 import New from '@/pages/admin/New';
 import Products from '@/pages/admin/Products';
@@ -23,6 +24,11 @@ export default new Router({
       path: '/cart',
       name: 'Cart',
       component: Cart,
+    },
+    {
+      path: '/details/:id',
+      name: 'Details',
+      component: Details,
     },
     {
       path: '/admin',
